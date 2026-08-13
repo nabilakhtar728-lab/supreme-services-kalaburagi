@@ -9,9 +9,16 @@
 <meta name="description" content="Supreme Services provides professional manpower solutions in Kalaburagi including housekeeping staff, ayyammas, ward boys, office boys, supervisors, bouncers and security guards.">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
 
-html{scroll-behavior:smooth}
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
 
 body{
 font-family:Arial,Helvetica,sans-serif;
@@ -20,14 +27,16 @@ background:#fff;
 line-height:1.6;
 }
 
-a{text-decoration:none}
+a{
+text-decoration:none;
+}
 
 .container{
 width:min(1150px,92%);
 margin:auto;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 
 header{
 position:sticky;
@@ -39,32 +48,26 @@ border-bottom:1px solid #e7ebf0;
 }
 
 .nav{
-height:78px;
+min-height:82px;
 display:flex;
 align-items:center;
 justify-content:space-between;
+gap:20px;
 }
+
+/* NEW LOGO SIZE */
 
 .logo{
 display:flex;
 align-items:center;
-gap:12px;
 }
 
 .logo img{
-width:58px;
-height:58px;
+width:170px;
+height:auto;
+max-height:70px;
 object-fit:contain;
-}
-
-.logo-text{
-font-size:20px;
-font-weight:900;
-color:#0750a0;
-}
-
-.logo-text span{
-color:#e87512;
+display:block;
 }
 
 nav{
@@ -90,7 +93,7 @@ padding:11px 18px;
 border-radius:7px;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 
 .hero{
 background:
@@ -167,14 +170,19 @@ text-align:center;
 backdrop-filter:blur(12px);
 }
 
+/* WIDE LOGO — NOT SQUARE */
+
 .hero-card img{
-width:180px;
-height:180px;
+width:100%;
+max-width:390px;
+height:auto;
+max-height:none;
 object-fit:contain;
-background:white;
-border-radius:18px;
-padding:10px;
-margin-bottom:25px;
+background:transparent;
+border-radius:0;
+padding:0;
+margin:0 auto 25px;
+display:block;
 }
 
 .hero-card h2{
@@ -187,7 +195,7 @@ font-size:14px;
 margin:12px auto 0;
 }
 
-/* STATS */
+/* ================= STATS ================= */
 
 .stats{
 background:#f7f9fc;
@@ -220,7 +228,7 @@ font-size:13px;
 color:#667085;
 }
 
-/* SECTIONS */
+/* ================= SECTIONS ================= */
 
 section{
 padding:95px 0;
@@ -244,7 +252,7 @@ h2 span{
 color:#f28a13;
 }
 
-/* ABOUT */
+/* ================= ABOUT ================= */
 
 .about-grid{
 display:grid;
@@ -262,7 +270,7 @@ font-size:17px;
 margin-top:18px;
 }
 
-/* SERVICES */
+/* ================= SERVICES ================= */
 
 .services{
 background:#f7f9fc;
@@ -330,7 +338,7 @@ font-size:14px;
 color:#667085;
 }
 
-/* WHY */
+/* ================= WHY ================= */
 
 .why{
 background:#061b3e;
@@ -371,7 +379,7 @@ font-size:14px;
 color:#b8c8dd;
 }
 
-/* MANAGEMENT */
+/* ================= MANAGEMENT ================= */
 
 .people{
 display:grid;
@@ -403,7 +411,7 @@ color:#0750a0;
 font-weight:800;
 }
 
-/* CONTACT */
+/* ================= CONTACT ================= */
 
 .contact{
 background:#f7f9fc;
@@ -452,7 +460,7 @@ color:#8993a3;
 font-size:14px;
 }
 
-/* FORM */
+/* ================= FORM ================= */
 
 form{
 background:white;
@@ -469,7 +477,9 @@ font-weight:800;
 margin-bottom:17px;
 }
 
-input,select,textarea{
+input,
+select,
+textarea{
 width:100%;
 margin-top:7px;
 padding:13px;
@@ -493,7 +503,7 @@ font-weight:900;
 cursor:pointer;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer{
 background:#041a3b;
@@ -507,6 +517,8 @@ justify-content:space-between;
 gap:30px;
 }
 
+/* WIDE FOOTER LOGO */
+
 .footer-logo{
 display:flex;
 align-items:center;
@@ -517,11 +529,13 @@ color:white;
 }
 
 .footer-logo img{
-width:45px;
-height:45px;
+width:170px;
+height:auto;
+max-height:60px;
 object-fit:contain;
-background:white;
-border-radius:7px;
+background:transparent;
+border-radius:0;
+display:block;
 }
 
 .footer-logo span{
@@ -533,7 +547,7 @@ text-align:right;
 font-size:12px;
 }
 
-/* WHATSAPP */
+/* ================= WHATSAPP ================= */
 
 .whatsapp{
 position:fixed;
@@ -551,7 +565,7 @@ font-size:27px;
 box-shadow:0 8px 25px rgba(0,0,0,.2);
 }
 
-/* MOBILE */
+/* ================= TABLET ================= */
 
 @media(max-width:850px){
 
@@ -581,6 +595,8 @@ align-items:flex-start;
 }
 
 }
+
+/* ================= MOBILE ================= */
 
 @media(max-width:560px){
 
@@ -614,13 +630,22 @@ border-bottom:1px solid #e1e6ed;
 border-bottom:0;
 }
 
-.logo-text{
-font-size:16px;
-}
+/* MOBILE LOGO */
 
 .logo img{
-width:48px;
-height:48px;
+width:145px;
+height:auto;
+max-height:60px;
+}
+
+.hero-card{
+padding:25px 18px;
+}
+
+.hero-card img{
+width:100%;
+max-width:330px;
+height:auto;
 }
 
 .footer{
@@ -631,6 +656,26 @@ flex-direction:column;
 text-align:left;
 }
 
+.footer-logo img{
+width:150px;
+height:auto;
+max-height:55px;
+}
+
+}
+
+/* VERY SMALL PHONES */
+
+@media(max-width:380px){
+
+.logo img{
+width:125px;
+}
+
+.hero-card img{
+max-width:280px;
+}
+
 }
 
 </style>
@@ -638,7 +683,8 @@ text-align:left;
 
 <body>
 
-<!-- HEADER -->
+
+<!-- ================= HEADER ================= -->
 
 <header>
 
@@ -648,18 +694,18 @@ text-align:left;
 
 <img src="logo.jpeg.JPG" alt="Supreme Services Logo">
 
-<div class="logo-text">
-SUPREME <span>SERVICES</span>
-</div>
-
 </a>
 
 <nav>
 
 <a href="#about">About</a>
+
 <a href="#services">Services</a>
+
 <a href="#why">Why Us</a>
+
 <a href="#management">Management</a>
+
 <a href="#contact">Contact</a>
 
 <a href="tel:+919187582210" class="call">
@@ -673,7 +719,7 @@ Call Now
 </header>
 
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 
@@ -702,10 +748,13 @@ organizations across Kalaburagi.
 Request Manpower →
 </a>
 
-<a href="https://wa.me/919187582210?text=Hello%20Supreme%20Services%2C%20I%20would%20like%20to%20enquire%20about%20manpower%20services."
+<a
+href="https://wa.me/919187582210?text=Hello%20Supreme%20Services%2C%20I%20would%20like%20to%20enquire%20about%20manpower%20services."
 target="_blank"
 class="btn secondary">
+
 WhatsApp Us
+
 </a>
 
 </div>
@@ -715,11 +764,13 @@ WhatsApp Us
 
 <div class="hero-card">
 
-<img src="logo.jpeg.JPG" alt="Supreme Services">
+<img
+src="logo.jpeg.JPG"
+alt="Supreme Services Logo">
 
 <h2>
 Excellence in<br>
-Every Service
+<span>Every Service</span>
 </h2>
 
 <p>
@@ -733,33 +784,50 @@ Trusted manpower support in Kalaburagi
 </section>
 
 
-<!-- STATS -->
+<!-- ================= STATS ================= -->
 
 <div class="stats">
 
 <div class="container stats-grid">
 
 <div class="stat">
+
 <strong>15+</strong>
-<span>Sites Managed Across Kalaburagi</span>
+
+<span>
+Sites Managed Across Kalaburagi
+</span>
+
 </div>
 
+
 <div class="stat">
+
 <strong>7</strong>
-<span>Manpower Service Categories</span>
+
+<span>
+Manpower Service Categories
+</span>
+
 </div>
+
 
 <div class="stat">
+
 <strong>24/7</strong>
-<span>Professional Operational Support</span>
-</div>
+
+<span>
+Professional Operational Support
+</span>
 
 </div>
 
 </div>
 
+</div>
 
-<!-- ABOUT -->
+
+<!-- ================= ABOUT ================= -->
 
 <section id="about">
 
@@ -777,6 +845,7 @@ Professional manpower built around
 </h2>
 
 </div>
+
 
 <div class="about-text">
 
@@ -804,7 +873,7 @@ bouncers and security guards.
 </section>
 
 
-<!-- SERVICES -->
+<!-- ================= SERVICES ================= -->
 
 <section class="services" id="services">
 
@@ -837,79 +906,156 @@ your organization's requirements.
 
 
 <div class="service">
-<div class="service-number">01</div>
-<div class="service-icon">✦</div>
-<h3>Housekeeping Staff</h3>
+
+<div class="service-number">
+01
+</div>
+
+<div class="service-icon">
+✦
+</div>
+
+<h3>
+Housekeeping Staff
+</h3>
+
 <p>
 Reliable housekeeping manpower for hospitals,
 offices and facilities.
 </p>
+
 </div>
 
 
 <div class="service">
-<div class="service-number">02</div>
-<div class="service-icon">+</div>
-<h3>Experienced Ayyammas</h3>
+
+<div class="service-number">
+02
+</div>
+
+<div class="service-icon">
++
+</div>
+
+<h3>
+Experienced Ayyammas
+</h3>
+
 <p>
 Experienced support staff for hospitals and
 care environments.
 </p>
+
 </div>
 
 
 <div class="service">
-<div class="service-number">03</div>
-<div class="service-icon">+</div>
-<h3>Experienced Ward Boys</h3>
+
+<div class="service-number">
+03
+</div>
+
+<div class="service-icon">
++
+</div>
+
+<h3>
+Experienced Ward Boys
+</h3>
+
 <p>
 Reliable ward support personnel for healthcare
 facilities.
 </p>
+
 </div>
 
 
 <div class="service">
-<div class="service-number">04</div>
-<div class="service-icon">+</div>
-<h3>Office Boys</h3>
+
+<div class="service-number">
+04
+</div>
+
+<div class="service-icon">
++
+</div>
+
+<h3>
+Office Boys
+</h3>
+
 <p>
 Practical office support for everyday
 workplace requirements.
 </p>
+
 </div>
 
 
 <div class="service">
-<div class="service-number">05</div>
-<div class="service-icon">+</div>
-<h3>Supervisors</h3>
+
+<div class="service-number">
+05
+</div>
+
+<div class="service-icon">
++
+</div>
+
+<h3>
+Supervisors
+</h3>
+
 <p>
 Supervisory manpower to help coordinate
 daily operations.
 </p>
+
 </div>
 
 
 <div class="service">
-<div class="service-number">06</div>
-<div class="service-icon">+</div>
-<h3>Bouncers</h3>
+
+<div class="service-number">
+06
+</div>
+
+<div class="service-icon">
++
+</div>
+
+<h3>
+Bouncers
+</h3>
+
 <p>
 Professional personnel for access control
 and venue support.
 </p>
+
 </div>
 
 
 <div class="service">
-<div class="service-number">07</div>
-<div class="service-icon">+</div>
-<h3>Security Guards</h3>
+
+<div class="service-number">
+07
+</div>
+
+<div class="service-icon">
++
+</div>
+
+<h3>
+Security Guards
+</h3>
+
 <p>
 Security manpower for organizations,
 facilities and operational sites.
 </p>
+
 </div>
 
 
@@ -920,7 +1066,7 @@ facilities and operational sites.
 </section>
 
 
-<!-- WHY -->
+<!-- ================= WHY US ================= -->
 
 <section class="why" id="why">
 
@@ -942,52 +1088,86 @@ One partner for
 
 <div class="why-list">
 
+
 <div class="why-item">
+
 <span>01</span>
+
 <div>
-<h3>Reliable Manpower</h3>
+
+<h3>
+Reliable Manpower
+</h3>
+
 <p>
 Staffing support designed around
 your operational requirements.
 </p>
+
 </div>
+
 </div>
 
 
 <div class="why-item">
+
 <span>02</span>
+
 <div>
-<h3>Multiple Service Categories</h3>
+
+<h3>
+Multiple Service Categories
+</h3>
+
 <p>
 Housekeeping, healthcare support,
 office staff, supervision and security.
 </p>
+
 </div>
+
 </div>
 
 
 <div class="why-item">
+
 <span>03</span>
+
 <div>
-<h3>Local Presence</h3>
+
+<h3>
+Local Presence
+</h3>
+
 <p>
 Professional manpower services
 based in Kalaburagi.
 </p>
+
 </div>
+
 </div>
 
 
 <div class="why-item">
+
 <span>04</span>
+
 <div>
-<h3>Site Management</h3>
+
+<h3>
+Site Management
+</h3>
+
 <p>
 Managing manpower requirements across
 multiple client locations.
 </p>
+
 </div>
+
 </div>
+
 
 </div>
 
@@ -996,7 +1176,7 @@ multiple client locations.
 </section>
 
 
-<!-- MANAGEMENT -->
+<!-- ================= MANAGEMENT ================= -->
 
 <section id="management">
 
@@ -1013,6 +1193,7 @@ Speak directly with
 
 
 <div class="people">
+
 
 <div class="person">
 
@@ -1047,6 +1228,7 @@ Md Shahdil Khan
 
 </div>
 
+
 </div>
 
 </div>
@@ -1054,7 +1236,7 @@ Md Shahdil Khan
 </section>
 
 
-<!-- CONTACT -->
+<!-- ================= CONTACT ================= -->
 
 <section class="contact" id="contact">
 
@@ -1072,18 +1254,29 @@ Need manpower?
 </h2>
 
 <p class="contact-text">
+
 Tell us what type of staff you need and our
 management team can discuss your requirements.
+
 </p>
 
 
 <div class="contact-row">
 
-<div class="contact-icon">☎</div>
+<div class="contact-icon">
+☎
+</div>
 
 <div>
-<small>PHONE</small>
-<strong>+91 91875 82210</strong>
+
+<small>
+PHONE
+</small>
+
+<strong>
++91 91875 82210
+</strong>
+
 </div>
 
 </div>
@@ -1091,11 +1284,20 @@ management team can discuss your requirements.
 
 <div class="contact-row">
 
-<div class="contact-icon">☎</div>
+<div class="contact-icon">
+☎
+</div>
 
 <div>
-<small>PHONE</small>
-<strong>+91 91486 53964</strong>
+
+<small>
+PHONE
+</small>
+
+<strong>
++91 91486 53964
+</strong>
+
 </div>
 
 </div>
@@ -1103,11 +1305,20 @@ management team can discuss your requirements.
 
 <div class="contact-row">
 
-<div class="contact-icon">✉</div>
+<div class="contact-icon">
+✉
+</div>
 
 <div>
-<small>EMAIL</small>
-<strong>infosupremeservicesorg@gmail.com</strong>
+
+<small>
+EMAIL
+</small>
+
+<strong>
+infosupremeservicesorg@gmail.com
+</strong>
+
 </div>
 
 </div>
@@ -1115,49 +1326,99 @@ management team can discuss your requirements.
 
 <div class="contact-row">
 
-<div class="contact-icon">⌖</div>
+<div class="contact-icon">
+⌖
+</div>
 
 <div>
-<small>OFFICE</small>
+
+<small>
+OFFICE
+</small>
+
 <strong>
 Sri Tirumala Complex, Near Mudda Hospital,
 MG Road, Kalaburagi – 585105
 </strong>
-</div>
 
 </div>
 
 </div>
 
+</div>
+
+
+<!-- ENQUIRY FORM -->
 
 <form id="enquiry">
 
 <label>
+
 Your Name
-<input id="name" type="text" placeholder="Enter your name" required>
+
+<input
+id="name"
+type="text"
+placeholder="Enter your name"
+required>
+
 </label>
 
 
 <label>
+
 Phone Number
-<input id="phone" type="tel" placeholder="Enter your phone number" required>
+
+<input
+id="phone"
+type="tel"
+placeholder="Enter your phone number"
+required>
+
 </label>
 
 
 <label>
+
 Service Required
 
 <select id="service" required>
 
-<option value="">Select a service</option>
-<option>Housekeeping Staff</option>
-<option>Experienced Ayyammas</option>
-<option>Experienced Ward Boys</option>
-<option>Office Boys</option>
-<option>Supervisors</option>
-<option>Bouncers</option>
-<option>Security Guards</option>
-<option>Multiple Services</option>
+<option value="">
+Select a service
+</option>
+
+<option>
+Housekeeping Staff
+</option>
+
+<option>
+Experienced Ayyammas
+</option>
+
+<option>
+Experienced Ward Boys
+</option>
+
+<option>
+Office Boys
+</option>
+
+<option>
+Supervisors
+</option>
+
+<option>
+Bouncers
+</option>
+
+<option>
+Security Guards
+</option>
+
+<option>
+Multiple Services
+</option>
 
 </select>
 
@@ -1165,12 +1426,14 @@ Service Required
 
 
 <label>
+
 Your Requirement
 
 <textarea
 id="message"
 rows="5"
-placeholder="Tell us how many staff you require and any other details"></textarea>
+placeholder="Tell us how many staff you require and any other details">
+</textarea>
 
 </label>
 
@@ -1186,7 +1449,7 @@ Send Enquiry on WhatsApp →
 </section>
 
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -1196,11 +1459,9 @@ Send Enquiry on WhatsApp →
 
 <div class="footer-logo">
 
-<img src="logo.jpeg.JPG" alt="Supreme Services Logo">
-
-<div>
-SUPREME <span>SERVICES</span>
-</div>
+<img
+src="logo.jpeg.JPG"
+alt="Supreme Services Logo">
 
 </div>
 
@@ -1213,7 +1474,11 @@ Excellence in Every Service.
 
 <div class="footer-right">
 
-© <span id="year"></span> Supreme Services<br>
+© <span id="year"></span>
+Supreme Services
+
+<br>
+
 Kalaburagi, Karnataka
 
 </div>
@@ -1223,16 +1488,20 @@ Kalaburagi, Karnataka
 </footer>
 
 
-<!-- WHATSAPP -->
+<!-- ================= WHATSAPP ================= -->
 
 <a
 class="whatsapp"
 href="https://wa.me/919187582210"
 target="_blank"
 aria-label="WhatsApp">
+
 ☎
+
 </a>
 
+
+<!-- ================= JAVASCRIPT ================= -->
 
 <script>
 
@@ -1241,7 +1510,7 @@ new Date().getFullYear();
 
 
 document.getElementById("enquiry")
-.addEventListener("submit",function(e){
+.addEventListener("submit", function(e){
 
 e.preventDefault();
 
@@ -1257,15 +1526,28 @@ document.getElementById("service").value;
 const message =
 document.getElementById("message").value;
 
+
 const text =
-"Hello Supreme Services,%0A%0A"+
-"Name: "+encodeURIComponent(name)+"%0A"+
-"Phone: "+encodeURIComponent(phone)+"%0A"+
-"Service: "+encodeURIComponent(service)+"%0A"+
-"Requirement: "+encodeURIComponent(message);
+"Hello Supreme Services,%0A%0A" +
+
+"Name: " +
+encodeURIComponent(name) +
+"%0A" +
+
+"Phone: " +
+encodeURIComponent(phone) +
+"%0A" +
+
+"Service: " +
+encodeURIComponent(service) +
+"%0A" +
+
+"Requirement: " +
+encodeURIComponent(message);
+
 
 window.open(
-"https://wa.me/919187582210?text="+text,
+"https://wa.me/919187582210?text=" + text,
 "_blank"
 );
 
