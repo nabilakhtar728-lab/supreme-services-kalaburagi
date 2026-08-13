@@ -1,37 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Supreme Services | Manpower Services in Kalaburagi</title>
+<title>Supreme Services | Kalaburagi</title>
 
-<meta name="description" content="Supreme Services provides professional manpower solutions in Kalaburagi including housekeeping, ayyammas, ward boys, office boys, supervisors, bouncers and security guards.">
+<meta name="description" content="Supreme Services - Professional manpower solutions in Kalaburagi. Housekeeping staff, ayyammas, ward boys, office boys, supervisors, bouncers and security guards.">
 
 <style>
+*{box-sizing:border-box;margin:0;padding:0}
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
 font-family:Arial,Helvetica,sans-serif;
 color:#172033;
-line-height:1.6;
 background:#fff;
+line-height:1.6;
 }
 
-a{
-text-decoration:none;
-color:inherit;
-}
+a{text-decoration:none}
 
 .container{
 width:min(1150px,92%);
@@ -43,48 +32,59 @@ margin:auto;
 header{
 position:sticky;
 top:0;
-z-index:999;
-background:rgba(255,255,255,.96);
+z-index:1000;
+background:rgba(255,255,255,.97);
 backdrop-filter:blur(12px);
-border-bottom:1px solid #e7ebf1;
+border-bottom:1px solid #e7ebf0;
 }
 
-.navbar{
-height:76px;
+.nav{
+height:78px;
 display:flex;
 align-items:center;
 justify-content:space-between;
 }
 
 .logo{
-font-size:24px;
-font-weight:900;
-letter-spacing:-1px;
-color:#082a63;
+display:flex;
+align-items:center;
+gap:12px;
 }
 
-.logo span{
-color:#f28a13;
+.logo img{
+width:58px;
+height:58px;
+object-fit:contain;
+}
+
+.logo-text{
+font-size:20px;
+font-weight:900;
+color:#0750a0;
+}
+
+.logo-text span{
+color:#e87512;
 }
 
 nav{
 display:flex;
+gap:27px;
 align-items:center;
-gap:28px;
 }
 
 nav a{
 font-size:14px;
-font-weight:600;
+font-weight:700;
 color:#344054;
 }
 
 nav a:hover{
-color:#0d4b9b;
+color:#0750a0;
 }
 
-.call-btn{
-background:#082a63;
+.call{
+background:#0750a0;
 color:white!important;
 padding:11px 18px;
 border-radius:7px;
@@ -93,142 +93,151 @@ border-radius:7px;
 /* HERO */
 
 .hero{
-position:relative;
-overflow:hidden;
-color:white;
-padding:110px 0 100px;
 background:
-radial-gradient(circle at 85% 15%,rgba(242,138,19,.22),transparent 25%),
-linear-gradient(135deg,#061a3b,#0b3474);
-}
-
-.hero:after{
-content:"";
-position:absolute;
-width:500px;
-height:500px;
-border-radius:50%;
-right:-250px;
-top:-220px;
-border:1px solid rgba(255,255,255,.12);
-box-shadow:
-0 0 0 70px rgba(255,255,255,.025),
-0 0 0 140px rgba(255,255,255,.018);
+radial-gradient(circle at 85% 15%,rgba(238,126,16,.23),transparent 25%),
+linear-gradient(135deg,#041b42,#0750a0);
+color:#fff;
+padding:95px 0;
+overflow:hidden;
 }
 
 .hero-grid{
-position:relative;
-z-index:2;
 display:grid;
 grid-template-columns:1.1fr .9fr;
 gap:70px;
 align-items:center;
 }
 
-.eyebrow{
+.tag{
 font-size:12px;
 font-weight:800;
 letter-spacing:2px;
-color:#ffad3b;
+color:#ffb04c;
 margin-bottom:18px;
 }
 
-h1{
-font-size:clamp(48px,6vw,76px);
-line-height:1.03;
-letter-spacing:-4px;
+.hero h1{
+font-size:clamp(45px,6vw,72px);
+line-height:1.04;
+letter-spacing:-3px;
 margin-bottom:25px;
 }
 
-h1 span{
-color:#ff9a1f;
+.hero h1 span{
+color:#f28a13;
 }
 
-.hero-text{
-max-width:610px;
+.hero p{
+max-width:620px;
 font-size:18px;
-color:#d6e1f0;
-margin-bottom:35px;
+color:#dce8f7;
+margin-bottom:32px;
 }
 
 .buttons{
 display:flex;
-gap:14px;
+gap:13px;
 flex-wrap:wrap;
 }
 
 .btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
 padding:14px 22px;
 border-radius:7px;
 font-size:14px;
 font-weight:800;
+display:inline-block;
 }
 
-.orange{
+.primary{
 background:#f28a13;
 color:#111;
 }
 
-.outline{
-border:1px solid rgba(255,255,255,.35);
+.secondary{
+border:1px solid rgba(255,255,255,.4);
 color:white;
 }
 
 .hero-card{
-background:rgba(255,255,255,.08);
+background:rgba(255,255,255,.09);
 border:1px solid rgba(255,255,255,.18);
-border-radius:20px;
-padding:40px;
+border-radius:22px;
+padding:35px;
 text-align:center;
 backdrop-filter:blur(12px);
-box-shadow:0 30px 70px rgba(0,0,0,.2);
 }
 
-.monogram{
-width:120px;
-height:120px;
-margin:0 auto 30px;
+.hero-card img{
+width:180px;
+height:180px;
+object-fit:contain;
 background:white;
-color:#082a63;
-border-radius:25px;
-display:grid;
-place-items:center;
-font-size:70px;
-font-weight:900;
-box-shadow:12px 12px 0 #f28a13;
+border-radius:18px;
+padding:10px;
+margin-bottom:25px;
 }
 
 .hero-card h2{
 font-size:28px;
 line-height:1.15;
-margin-bottom:10px;
 }
 
 .hero-card p{
-color:#cbd9eb;
+font-size:14px;
+margin:12px auto 0;
 }
 
-/* GENERAL */
+/* STATS */
+
+.stats{
+background:#f7f9fc;
+border-bottom:1px solid #e8edf3;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+}
+
+.stat{
+padding:28px;
+text-align:center;
+border-right:1px solid #e1e6ed;
+}
+
+.stat:last-child{
+border-right:0;
+}
+
+.stat strong{
+display:block;
+font-size:32px;
+color:#0750a0;
+}
+
+.stat span{
+font-size:13px;
+color:#667085;
+}
+
+/* SECTIONS */
 
 section{
-padding:100px 0;
+padding:95px 0;
 }
 
-.section-label{
-font-size:12px;
-font-weight:800;
+.label{
+font-size:11px;
+font-weight:900;
 letter-spacing:2px;
-color:#0d4b9b;
-margin-bottom:16px;
+color:#0750a0;
+margin-bottom:14px;
 }
 
 h2{
-font-size:clamp(36px,4.5vw,57px);
+font-size:clamp(35px,4vw,55px);
 line-height:1.08;
-letter-spacing:-3px;
+letter-spacing:-2.5px;
 }
 
 h2 span{
@@ -240,17 +249,17 @@ color:#f28a13;
 .about-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:100px;
+gap:90px;
+align-items:start;
 }
 
 .about-text{
-padding-top:8px;
-font-size:17px;
 color:#667085;
+font-size:17px;
 }
 
 .about-text p+p{
-margin-top:20px;
+margin-top:18px;
 }
 
 /* SERVICES */
@@ -259,20 +268,20 @@ margin-top:20px;
 background:#f7f9fc;
 }
 
-.section-heading{
+.heading{
 display:flex;
 justify-content:space-between;
 align-items:end;
-gap:40px;
-margin-bottom:50px;
+gap:30px;
+margin-bottom:45px;
 }
 
-.section-heading>p{
-max-width:350px;
+.heading>p{
+max-width:390px;
 color:#667085;
 }
 
-.service-grid{
+.services-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:18px;
@@ -280,40 +289,40 @@ gap:18px;
 
 .service{
 background:white;
-border:1px solid #e1e7ef;
+border:1px solid #e2e7ee;
 border-radius:15px;
-padding:30px;
-min-height:230px;
+padding:28px;
+min-height:220px;
 transition:.25s;
 }
 
 .service:hover{
-transform:translateY(-6px);
-box-shadow:0 18px 40px rgba(15,35,70,.09);
+transform:translateY(-5px);
+box-shadow:0 18px 40px rgba(0,0,0,.08);
 }
 
-.number{
+.service-number{
 font-size:11px;
-font-weight:800;
+font-weight:900;
 color:#f28a13;
 }
 
-.icon{
-width:46px;
-height:46px;
-border-radius:11px;
-background:#edf3fa;
-color:#0d4b9b;
+.service-icon{
+width:45px;
+height:45px;
+border-radius:10px;
+background:#edf4fc;
+color:#0750a0;
 display:grid;
 place-items:center;
-font-size:21px;
-font-weight:800;
-margin:25px 0;
+font-size:20px;
+font-weight:bold;
+margin:23px 0;
 }
 
 .service h3{
 font-size:19px;
-margin-bottom:9px;
+margin-bottom:7px;
 }
 
 .service p{
@@ -324,49 +333,45 @@ color:#667085;
 /* WHY */
 
 .why{
-background:#081a38;
+background:#061b3e;
 color:white;
 }
 
 .why-grid{
 display:grid;
-grid-template-columns:.9fr 1.1fr;
-gap:100px;
+grid-template-columns:1fr 1fr;
+gap:90px;
 }
 
 .why-list{
 display:grid;
-gap:28px;
+gap:25px;
 }
 
 .why-item{
 display:grid;
-grid-template-columns:40px 1fr;
-gap:18px;
-padding-bottom:27px;
+grid-template-columns:38px 1fr;
+gap:15px;
 border-bottom:1px solid rgba(255,255,255,.14);
+padding-bottom:24px;
 }
 
 .why-item>span{
 color:#f28a13;
-font-weight:800;
+font-weight:900;
 }
 
 .why-item h3{
 font-size:19px;
-margin-bottom:6px;
+margin-bottom:5px;
 }
 
 .why-item p{
 font-size:14px;
-color:#aebed3;
+color:#b8c8dd;
 }
 
 /* MANAGEMENT */
-
-.management{
-background:white;
-}
 
 .people{
 display:grid;
@@ -376,31 +381,26 @@ margin-top:45px;
 }
 
 .person{
-border:1px solid #e2e7ee;
+border:1px solid #e1e6ed;
 border-radius:15px;
 padding:30px;
-transition:.2s;
-}
-
-.person:hover{
-box-shadow:0 15px 35px rgba(0,0,0,.06);
 }
 
 .role{
 font-size:10px;
+font-weight:900;
 letter-spacing:1.5px;
-font-weight:800;
 color:#f28a13;
 }
 
 .person h3{
-font-size:22px;
+font-size:23px;
 margin:8px 0;
 }
 
 .person a{
-color:#0d4b9b;
-font-weight:700;
+color:#0750a0;
+font-weight:800;
 }
 
 /* CONTACT */
@@ -412,21 +412,21 @@ background:#f7f9fc;
 .contact-grid{
 display:grid;
 grid-template-columns:1fr .9fr;
-gap:90px;
+gap:80px;
 }
 
-.contact-description{
+.contact-text{
 color:#667085;
-max-width:520px;
 margin:20px 0 30px;
+max-width:520px;
 }
 
-.contact-item{
+.contact-row{
 display:flex;
-gap:15px;
+gap:14px;
 align-items:center;
 padding:16px 0;
-border-top:1px solid #e0e5ec;
+border-top:1px solid #e0e5eb;
 }
 
 .contact-icon{
@@ -436,20 +436,19 @@ border-radius:9px;
 background:white;
 display:grid;
 place-items:center;
-color:#0d4b9b;
+color:#0750a0;
 font-size:18px;
 }
 
-.contact-item small{
+.contact-row small{
 display:block;
 font-size:9px;
-letter-spacing:1.5px;
-font-weight:800;
+font-weight:900;
+letter-spacing:1px;
 color:#8993a3;
 }
 
-.contact-item strong{
-display:block;
+.contact-row strong{
 font-size:14px;
 }
 
@@ -457,72 +456,72 @@ font-size:14px;
 
 form{
 background:white;
-border:1px solid #e1e6ed;
+padding:30px;
 border-radius:16px;
-padding:32px;
-box-shadow:0 20px 50px rgba(20,40,80,.07);
+border:1px solid #e1e6ed;
+box-shadow:0 18px 45px rgba(0,0,0,.06);
 }
 
 label{
 display:block;
 font-size:12px;
-font-weight:700;
+font-weight:800;
 margin-bottom:17px;
 }
 
-input,
-select,
-textarea{
+input,select,textarea{
 width:100%;
 margin-top:7px;
 padding:13px;
-border:1px solid #dce2ea;
+border:1px solid #d9e0e8;
 border-radius:7px;
 font-family:inherit;
 font-size:14px;
-outline:none;
-}
-
-input:focus,
-select:focus,
-textarea:focus{
-border-color:#0d4b9b;
-box-shadow:0 0 0 3px rgba(13,75,155,.08);
 }
 
 textarea{
 resize:vertical;
 }
 
-.submit{
+button{
 width:100%;
-border:0;
-cursor:pointer;
 padding:15px;
+border:0;
 border-radius:7px;
 background:#f28a13;
-font-weight:800;
-font-size:14px;
+font-weight:900;
+cursor:pointer;
 }
 
 /* FOOTER */
 
 footer{
-background:#061a3a;
-color:#b8c6da;
+background:#041a3b;
+color:#aebed3;
 padding:45px 0;
 }
 
-.footer-grid{
+.footer{
 display:flex;
 justify-content:space-between;
 gap:30px;
 }
 
 .footer-logo{
-font-size:22px;
+display:flex;
+align-items:center;
+gap:10px;
+font-size:21px;
 font-weight:900;
 color:white;
+}
+
+.footer-logo img{
+width:45px;
+height:45px;
+object-fit:contain;
+background:white;
+border-radius:7px;
 }
 
 .footer-logo span{
@@ -550,17 +549,17 @@ grid-template-columns:1fr;
 gap:50px;
 }
 
-.service-grid{
+.services-grid{
 grid-template-columns:1fr 1fr;
-}
-
-.section-heading{
-flex-direction:column;
-align-items:flex-start;
 }
 
 .people{
 grid-template-columns:1fr;
+}
+
+.heading{
+flex-direction:column;
+align-items:flex-start;
 }
 
 }
@@ -572,33 +571,41 @@ padding:70px 0;
 }
 
 .hero{
-padding:75px 0;
+padding:70px 0;
 }
 
-h1{
-font-size:48px;
+.hero h1{
+font-size:47px;
 letter-spacing:-2px;
 }
 
-.hero-text{
-font-size:16px;
-}
-
-.service-grid{
+.services-grid{
 grid-template-columns:1fr;
 }
 
-.hero-card{
-padding:30px 20px;
+.stats-grid{
+grid-template-columns:1fr;
 }
 
-.monogram{
-width:95px;
-height:95px;
-font-size:55px;
+.stat{
+border-right:0;
+border-bottom:1px solid #e1e6ed;
 }
 
-.footer-grid{
+.stat:last-child{
+border-bottom:0;
+}
+
+.logo-text{
+font-size:16px;
+}
+
+.logo img{
+width:48px;
+height:48px;
+}
+
+.footer{
 flex-direction:column;
 }
 
@@ -608,38 +615,22 @@ text-align:left;
 
 }
 
-/* MOBILE MENU */
+/* FLOATING WHATSAPP */
 
-.menu-button{
-display:none;
-}
-
-@media(max-width:850px){
-
-.menu-button{
-display:block;
-background:#082a63;
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+z-index:2000;
+width:58px;
+height:58px;
+border-radius:50%;
+background:#25D366;
 color:white;
-border:0;
-padding:9px 13px;
-border-radius:6px;
-font-size:20px;
-cursor:pointer;
-}
-
-nav.mobile-open{
-display:flex;
-position:absolute;
-top:76px;
-left:0;
-right:0;
-background:white;
-padding:20px;
-flex-direction:column;
-gap:18px;
-box-shadow:0 10px 30px rgba(0,0,0,.1);
-}
-
+display:grid;
+place-items:center;
+font-size:28px;
+box-shadow:0 8px 25px rgba(0,0,0,.2);
 }
 
 </style>
@@ -647,19 +638,21 @@ box-shadow:0 10px 30px rgba(0,0,0,.1);
 
 <body>
 
-<!-- HEADER -->
-
 <header>
 
-<div class="container navbar">
+<div class="container nav">
 
 <a href="#" class="logo">
+
+<img src="logo.jpeg" alt="Supreme Services Logo">
+
+<div class="logo-text">
 SUPREME <span>SERVICES</span>
+</div>
+
 </a>
 
-<button class="menu-button" onclick="toggleMenu()">☰</button>
-
-<nav id="navigation">
+<nav>
 
 <a href="#about">About</a>
 <a href="#services">Services</a>
@@ -667,7 +660,7 @@ SUPREME <span>SERVICES</span>
 <a href="#management">Management</a>
 <a href="#contact">Contact</a>
 
-<a href="tel:+919187582210" class="call-btn">
+<a href="tel:+919187582210" class="call">
 Call Now
 </a>
 
@@ -686,31 +679,30 @@ Call Now
 
 <div>
 
-<div class="eyebrow">
-KALABURAGI • MANPOWER SOLUTIONS
+<div class="tag">
+KALABURAGI • PROFESSIONAL MANPOWER SOLUTIONS
 </div>
 
 <h1>
-Reliable people.<br>
+Reliable manpower.<br>
 <span>Professional service.</span>
 </h1>
 
-<p class="hero-text">
-Supreme Services provides dependable manpower solutions
-for hospitals, offices and organizations across Kalaburagi.
-Our focus is professional service, reliable manpower and
-consistent operational support.
+<p>
+Supreme Services provides reliable and professional
+manpower solutions for hospitals, offices and other
+organizations across Kalaburagi.
 </p>
 
 <div class="buttons">
 
-<a href="#contact" class="btn orange">
-Request Staff →
+<a href="#contact" class="btn primary">
+Request Manpower →
 </a>
 
 <a href="https://wa.me/919187582210?text=Hello%20Supreme%20Services%2C%20I%20would%20like%20to%20enquire%20about%20manpower%20services."
 target="_blank"
-class="btn outline">
+class="btn secondary">
 WhatsApp Us
 </a>
 
@@ -721,17 +713,15 @@ WhatsApp Us
 
 <div class="hero-card">
 
-<div class="monogram">
-S
-</div>
+<img src="logo.jpeg" alt="Supreme Services">
 
 <h2>
-Professional<br>
-Manpower Solutions
+Excellence in<br>
+Every Service
 </h2>
 
 <p>
-Excellence in Every Service
+Trusted manpower support in Kalaburagi
 </p>
 
 </div>
@@ -739,6 +729,32 @@ Excellence in Every Service
 </div>
 
 </section>
+
+
+<!-- STATS -->
+
+<div class="stats">
+
+<div class="container stats-grid">
+
+<div class="stat">
+<strong>15+</strong>
+<span>Sites Managed Across Kalaburagi</span>
+</div>
+
+<div class="stat">
+<strong>7</strong>
+<span>Manpower Service Categories</span>
+</div>
+
+<div class="stat">
+<strong>24/7</strong>
+<span>Professional Operational Support</span>
+</div>
+
+</div>
+
+</div>
 
 
 <!-- ABOUT -->
@@ -749,12 +765,12 @@ Excellence in Every Service
 
 <div>
 
-<div class="section-label">
+<div class="label">
 ABOUT SUPREME SERVICES
 </div>
 
 <h2>
-Manpower support built around
+Professional manpower built around
 <span>reliability.</span>
 </h2>
 
@@ -764,17 +780,17 @@ Manpower support built around
 
 <p>
 Supreme Services is a professional manpower service
-provider based in Kalaburagi.
+provider based in Kalaburagi, Karnataka.
 </p>
 
 <p>
-We provide manpower solutions for hospitals,
-offices and other organizations with a focus on
-professional and dependable service.
+We provide dependable manpower solutions for hospitals,
+offices and other organizations, helping clients manage
+their day-to-day staffing requirements.
 </p>
 
 <p>
-Our service categories include housekeeping,
+Our team provides housekeeping staff, experienced
 ayyammas, ward boys, office boys, supervisors,
 bouncers and security guards.
 </p>
@@ -792,63 +808,43 @@ bouncers and security guards.
 
 <div class="container">
 
-<div class="section-heading">
+<div class="heading">
 
 <div>
 
-<div class="section-label">
+<div class="label">
 OUR SERVICES
 </div>
 
 <h2>
-Staff for the work<br>
+Manpower for the work<br>
 <span>that keeps things moving.</span>
 </h2>
 
 </div>
 
 <p>
-Professional manpower categories designed to
-support your organization's daily operations.
+Choose the manpower category that matches
+your organization's requirements.
 </p>
 
 </div>
 
 
-<div class="service-grid">
+<div class="services-grid">
 
 
 <div class="service">
 
-<div class="number">01</div>
+<div class="service-number">01</div>
 
-<div class="icon">✦</div>
+<div class="service-icon">✦</div>
 
-<h3>
-Housekeeping Staff
-</h3>
+<h3>Housekeeping Staff</h3>
 
 <p>
-Reliable housekeeping manpower for
-day-to-day facility support.
-</p>
-
-</div>
-
-
-<div class="service">
-
-<div class="number">02</div>
-
-<div class="icon">+</div>
-
-<h3>
-Experienced Ayyammas
-</h3>
-
-<p>
-Experienced support staff for hospital
-and care environments.
+Reliable housekeeping manpower for hospitals,
+offices and facilities.
 </p>
 
 </div>
@@ -856,17 +852,15 @@ and care environments.
 
 <div class="service">
 
-<div class="number">03</div>
+<div class="service-number">02</div>
 
-<div class="icon">+</div>
+<div class="service-icon">+</div>
 
-<h3>
-Experienced Ward Boys
-</h3>
+<h3>Experienced Ayyammas</h3>
 
 <p>
-Reliable ward support personnel for
-healthcare facilities.
+Experienced support staff for hospitals and
+care environments.
 </p>
 
 </div>
@@ -874,16 +868,30 @@ healthcare facilities.
 
 <div class="service">
 
-<div class="number">04</div>
+<div class="service-number">03</div>
 
-<div class="icon">+</div>
+<div class="service-icon">+</div>
 
-<h3>
-Office Boys
-</h3>
+<h3>Experienced Ward Boys</h3>
 
 <p>
-Practical office support for routine
+Reliable ward support personnel for healthcare
+facilities.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">04</div>
+
+<div class="service-icon">+</div>
+
+<h3>Office Boys</h3>
+
+<p>
+Practical office support for everyday
 workplace requirements.
 </p>
 
@@ -892,17 +900,15 @@ workplace requirements.
 
 <div class="service">
 
-<div class="number">05</div>
+<div class="service-number">05</div>
 
-<div class="icon">+</div>
+<div class="service-icon">+</div>
 
-<h3>
-Supervisors
-</h3>
+<h3>Supervisors</h3>
 
 <p>
 Supervisory manpower to help coordinate
-day-to-day operations.
+daily operations.
 </p>
 
 </div>
@@ -910,13 +916,11 @@ day-to-day operations.
 
 <div class="service">
 
-<div class="number">06</div>
+<div class="service-number">06</div>
 
-<div class="icon">+</div>
+<div class="service-icon">+</div>
 
-<h3>
-Bouncers
-</h3>
+<h3>Bouncers</h3>
 
 <p>
 Professional personnel for access control
@@ -928,17 +932,15 @@ and venue support.
 
 <div class="service">
 
-<div class="number">07</div>
+<div class="service-number">07</div>
 
-<div class="icon">+</div>
+<div class="service-icon">+</div>
 
-<h3>
-Security Guards
-</h3>
+<h3>Security Guards</h3>
 
 <p>
-Security manpower for organizations
-and operational sites.
+Security manpower for organizations,
+facilities and operational sites.
 </p>
 
 </div>
@@ -959,7 +961,7 @@ and operational sites.
 
 <div>
 
-<div class="section-label" style="color:#ffad3b;">
+<div class="label" style="color:#ffad3b">
 WHY SUPREME SERVICES
 </div>
 
@@ -973,20 +975,17 @@ One partner for
 
 <div class="why-list">
 
-
 <div class="why-item">
 
 <span>01</span>
 
 <div>
 
-<h3>
-Reliable Manpower
-</h3>
+<h3>Reliable Manpower</h3>
 
 <p>
 Staffing support designed around
-your organization's operational requirements.
+your operational requirements.
 </p>
 
 </div>
@@ -1000,13 +999,11 @@ your organization's operational requirements.
 
 <div>
 
-<h3>
-Multiple Service Categories
-</h3>
+<h3>Multiple Service Categories</h3>
 
 <p>
-From housekeeping and ward support
-to supervision and security.
+Housekeeping, healthcare support,
+office staff, supervision and security.
 </p>
 
 </div>
@@ -1020,9 +1017,7 @@ to supervision and security.
 
 <div>
 
-<h3>
-Local Presence
-</h3>
+<h3>Local Presence</h3>
 
 <p>
 Professional manpower services
@@ -1034,6 +1029,23 @@ based in Kalaburagi.
 </div>
 
 
+<div class="why-item">
+
+<span>04</span>
+
+<div>
+
+<h3>Site Management</h3>
+
+<p>
+Managing manpower requirements across
+multiple client locations.
+</p>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -1043,22 +1055,21 @@ based in Kalaburagi.
 
 <!-- MANAGEMENT -->
 
-<section id="management" class="management">
+<section id="management">
 
 <div class="container">
 
-<div class="section-label">
+<div class="label">
 MANAGEMENT
 </div>
 
 <h2>
-Talk directly with
-<span>management.</span>
+Speak directly with
+<span>our management.</span>
 </h2>
 
 
 <div class="people">
-
 
 <div class="person">
 
@@ -1093,7 +1104,6 @@ Md Shahdil Khan
 
 </div>
 
-
 </div>
 
 </div>
@@ -1107,10 +1117,9 @@ Md Shahdil Khan
 
 <div class="container contact-grid">
 
-
 <div>
 
-<div class="section-label">
+<div class="label">
 CONTACT SUPREME SERVICES
 </div>
 
@@ -1119,21 +1128,19 @@ Need manpower?
 <span>Let's talk.</span>
 </h2>
 
-<p class="contact-description">
-Tell us what type of staff you need and
-contact Supreme Services management directly.
+<p class="contact-text">
+Tell us what type of staff you need and our
+management team can discuss your requirements.
 </p>
 
 
-<div class="contact-item">
+<div class="contact-row">
 
-<div class="contact-icon">
-☎
-</div>
+<div class="contact-icon">☎</div>
 
 <div>
 
-<small>CALL</small>
+<small>PHONE</small>
 
 <strong>
 +91 91875 82210
@@ -1144,11 +1151,26 @@ contact Supreme Services management directly.
 </div>
 
 
-<div class="contact-item">
+<div class="contact-row">
 
-<div class="contact-icon">
-✉
+<div class="contact-icon">☎</div>
+
+<div>
+
+<small>PHONE</small>
+
+<strong>
++91 91486 53964
+</strong>
+
 </div>
+
+</div>
+
+
+<div class="contact-row">
+
+<div class="contact-icon">✉</div>
 
 <div>
 
@@ -1163,11 +1185,9 @@ infosupremeservicesorg@gmail.com
 </div>
 
 
-<div class="contact-item">
+<div class="contact-row">
 
-<div class="contact-icon">
-⌖
-</div>
+<div class="contact-icon">⌖</div>
 
 <div>
 
@@ -1185,9 +1205,7 @@ MG Road, Kalaburagi – 585105
 </div>
 
 
-<!-- FORM -->
-
-<form id="enquiryForm">
+<form id="enquiry">
 
 <label>
 
@@ -1221,10 +1239,7 @@ Service Required
 
 <select id="service" required>
 
-<option value="">
-Select a service
-</option>
-
+<option value="">Select a service</option>
 <option>Housekeeping Staff</option>
 <option>Experienced Ayyammas</option>
 <option>Experienced Ward Boys</option>
@@ -1241,17 +1256,17 @@ Select a service
 
 <label>
 
-Message
+Your Requirement
 
 <textarea
 id="message"
 rows="5"
-placeholder="Tell us about your manpower requirement"></textarea>
+placeholder="Tell us how many staff you require and any other details"></textarea>
 
 </label>
 
 
-<button class="submit" type="submit">
+<button type="submit">
 Send Enquiry on WhatsApp →
 </button>
 
@@ -1266,12 +1281,18 @@ Send Enquiry on WhatsApp →
 
 <footer>
 
-<div class="container footer-grid">
+<div class="container footer">
 
 <div>
 
 <div class="footer-logo">
+
+<img src="logo.jpeg" alt="Supreme Services">
+
+<div>
 SUPREME <span>SERVICES</span>
+</div>
+
 </div>
 
 <p>
@@ -1279,6 +1300,7 @@ Excellence in Every Service.
 </p>
 
 </div>
+
 
 <div class="footer-right">
 
@@ -1292,39 +1314,41 @@ Kalaburagi, Karnataka
 </footer>
 
 
+<!-- FLOATING WHATSAPP -->
+
+<a
+class="whatsapp"
+href="https://wa.me/919187582210"
+target="_blank"
+aria-label="WhatsApp">
+☎
+</a>
+
+
 <script>
-
-function toggleMenu(){
-
-const nav=document.getElementById("navigation");
-
-nav.classList.toggle("mobile-open");
-
-}
-
 
 document.getElementById("year").textContent =
 new Date().getFullYear();
 
 
-document.getElementById("enquiryForm")
+document.getElementById("enquiry")
 .addEventListener("submit",function(e){
 
 e.preventDefault();
 
-const name=
+const name =
 document.getElementById("name").value;
 
-const phone=
+const phone =
 document.getElementById("phone").value;
 
-const service=
+const service =
 document.getElementById("service").value;
 
-const message=
+const message =
 document.getElementById("message").value;
 
-const text=
+const text =
 "Hello Supreme Services,%0A%0A"+
 "Name: "+encodeURIComponent(name)+"%0A"+
 "Phone: "+encodeURIComponent(phone)+"%0A"+
