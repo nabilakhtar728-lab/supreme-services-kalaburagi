@@ -1,1557 +1,1168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Supreme Services | Kalaburagi</title>
-
-<meta name="description" content="Supreme Services provides professional manpower solutions in Kalaburagi including housekeeping staff, ayyammas, ward boys, office boys, supervisors, bouncers and security guards.">
-
-<style>
-
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-font-family:Arial,Helvetica,sans-serif;
-color:#172033;
-background:#fff;
-line-height:1.6;
-}
-
-a{
-text-decoration:none;
-}
-
-.container{
-width:min(1150px,92%);
-margin:auto;
-}
-
-/* ================= HEADER ================= */
-
-header{
-position:sticky;
-top:0;
-z-index:1000;
-background:rgba(255,255,255,.97);
-backdrop-filter:blur(12px);
-border-bottom:1px solid #e7ebf0;
-}
-
-.nav{
-min-height:82px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:20px;
-}
-
-/* NEW LOGO SIZE */
-
-.logo{
-display:flex;
-align-items:center;
-}
-
-.logo img{
-width:170px;
-height:auto;
-max-height:70px;
-object-fit:contain;
-display:block;
-}
-
-nav{
-display:flex;
-gap:27px;
-align-items:center;
-}
-
-nav a{
-font-size:14px;
-font-weight:700;
-color:#344054;
-}
-
-nav a:hover{
-color:#0750a0;
-}
-
-.call{
-background:#0750a0;
-color:white!important;
-padding:11px 18px;
-border-radius:7px;
-}
-
-/* ================= HERO ================= */
-
-.hero{
-background:
-radial-gradient(circle at 85% 15%,rgba(238,126,16,.23),transparent 25%),
-linear-gradient(135deg,#041b42,#0750a0);
-color:#fff;
-padding:95px 0;
-overflow:hidden;
-}
-
-.hero-grid{
-display:grid;
-grid-template-columns:1.1fr .9fr;
-gap:70px;
-align-items:center;
-}
-
-.tag{
-font-size:12px;
-font-weight:800;
-letter-spacing:2px;
-color:#ffb04c;
-margin-bottom:18px;
-}
-
-.hero h1{
-font-size:clamp(45px,6vw,72px);
-line-height:1.04;
-letter-spacing:-3px;
-margin-bottom:25px;
-}
-
-.hero h1 span{
-color:#f28a13;
-}
-
-.hero p{
-max-width:620px;
-font-size:18px;
-color:#dce8f7;
-margin-bottom:32px;
-}
-
-.buttons{
-display:flex;
-gap:13px;
-flex-wrap:wrap;
-}
-
-.btn{
-padding:14px 22px;
-border-radius:7px;
-font-size:14px;
-font-weight:800;
-display:inline-block;
-}
-
-.primary{
-background:#f28a13;
-color:#111;
-}
-
-.secondary{
-border:1px solid rgba(255,255,255,.4);
-color:white;
-}
-
-.hero-card{
-background:rgba(255,255,255,.09);
-border:1px solid rgba(255,255,255,.18);
-border-radius:22px;
-padding:35px;
-text-align:center;
-backdrop-filter:blur(12px);
-}
-
-/* WIDE LOGO — NOT SQUARE */
-
-.hero-card img{
-width:100%;
-max-width:390px;
-height:auto;
-max-height:none;
-object-fit:contain;
-background:transparent;
-border-radius:0;
-padding:0;
-margin:0 auto 25px;
-display:block;
-}
-
-.hero-card h2{
-font-size:28px;
-line-height:1.15;
-}
-
-.hero-card p{
-font-size:14px;
-margin:12px auto 0;
-}
-
-/* ================= STATS ================= */
-
-.stats{
-background:#f7f9fc;
-border-bottom:1px solid #e8edf3;
-}
-
-.stats-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-}
-
-.stat{
-padding:28px;
-text-align:center;
-border-right:1px solid #e1e6ed;
-}
-
-.stat:last-child{
-border-right:0;
-}
-
-.stat strong{
-display:block;
-font-size:32px;
-color:#0750a0;
-}
-
-.stat span{
-font-size:13px;
-color:#667085;
-}
-
-/* ================= SECTIONS ================= */
-
-section{
-padding:95px 0;
-}
-
-.label{
-font-size:11px;
-font-weight:900;
-letter-spacing:2px;
-color:#0750a0;
-margin-bottom:14px;
-}
-
-h2{
-font-size:clamp(35px,4vw,55px);
-line-height:1.08;
-letter-spacing:-2.5px;
-}
-
-h2 span{
-color:#f28a13;
-}
-
-/* ================= ABOUT ================= */
-
-.about-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:90px;
-align-items:start;
-}
-
-.about-text{
-color:#667085;
-font-size:17px;
-}
-
-.about-text p+p{
-margin-top:18px;
-}
-
-/* ================= SERVICES ================= */
-
-.services{
-background:#f7f9fc;
-}
-
-.heading{
-display:flex;
-justify-content:space-between;
-align-items:end;
-gap:30px;
-margin-bottom:45px;
-}
-
-.heading>p{
-max-width:390px;
-color:#667085;
-}
-
-.services-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px;
-}
-
-.service{
-background:white;
-border:1px solid #e2e7ee;
-border-radius:15px;
-padding:28px;
-min-height:220px;
-transition:.25s;
-}
-
-.service:hover{
-transform:translateY(-5px);
-box-shadow:0 18px 40px rgba(0,0,0,.08);
-}
-
-.service-number{
-font-size:11px;
-font-weight:900;
-color:#f28a13;
-}
-
-.service-icon{
-width:45px;
-height:45px;
-border-radius:10px;
-background:#edf4fc;
-color:#0750a0;
-display:grid;
-place-items:center;
-font-size:20px;
-font-weight:bold;
-margin:23px 0;
-}
-
-.service h3{
-font-size:19px;
-margin-bottom:7px;
-}
-
-.service p{
-font-size:14px;
-color:#667085;
-}
-
-/* ================= WHY ================= */
-
-.why{
-background:#061b3e;
-color:white;
-}
-
-.why-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:90px;
-}
-
-.why-list{
-display:grid;
-gap:25px;
-}
-
-.why-item{
-display:grid;
-grid-template-columns:38px 1fr;
-gap:15px;
-border-bottom:1px solid rgba(255,255,255,.14);
-padding-bottom:24px;
-}
-
-.why-item>span{
-color:#f28a13;
-font-weight:900;
-}
-
-.why-item h3{
-font-size:19px;
-margin-bottom:5px;
-}
-
-.why-item p{
-font-size:14px;
-color:#b8c8dd;
-}
-
-/* ================= MANAGEMENT ================= */
-
-.people{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-margin-top:45px;
-}
-
-.person{
-border:1px solid #e1e6ed;
-border-radius:15px;
-padding:30px;
-}
-
-.role{
-font-size:10px;
-font-weight:900;
-letter-spacing:1.5px;
-color:#f28a13;
-}
-
-.person h3{
-font-size:23px;
-margin:8px 0;
-}
-
-.person a{
-color:#0750a0;
-font-weight:800;
-}
-
-/* ================= CONTACT ================= */
-
-.contact{
-background:#f7f9fc;
-}
-
-.contact-grid{
-display:grid;
-grid-template-columns:1fr .9fr;
-gap:80px;
-}
-
-.contact-text{
-color:#667085;
-margin:20px 0 30px;
-max-width:520px;
-}
-
-.contact-row{
-display:flex;
-gap:14px;
-align-items:center;
-padding:16px 0;
-border-top:1px solid #e0e5eb;
-}
-
-.contact-icon{
-width:42px;
-height:42px;
-border-radius:9px;
-background:white;
-display:grid;
-place-items:center;
-color:#0750a0;
-font-size:18px;
-}
-
-.contact-row small{
-display:block;
-font-size:9px;
-font-weight:900;
-letter-spacing:1px;
-color:#8993a3;
-}
-
-.contact-row strong{
-font-size:14px;
-}
-
-/* ================= FORM ================= */
-
-form{
-background:white;
-padding:30px;
-border-radius:16px;
-border:1px solid #e1e6ed;
-box-shadow:0 18px 45px rgba(0,0,0,.06);
-}
-
-label{
-display:block;
-font-size:12px;
-font-weight:800;
-margin-bottom:17px;
-}
-
-input,
-select,
-textarea{
-width:100%;
-margin-top:7px;
-padding:13px;
-border:1px solid #d9e0e8;
-border-radius:7px;
-font-family:inherit;
-font-size:14px;
-}
-
-textarea{
-resize:vertical;
-}
-
-button{
-width:100%;
-padding:15px;
-border:0;
-border-radius:7px;
-background:#f28a13;
-font-weight:900;
-cursor:pointer;
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-background:#041a3b;
-color:#aebed3;
-padding:45px 0;
-}
-
-.footer{
-display:flex;
-justify-content:space-between;
-gap:30px;
-}
-
-/* WIDE FOOTER LOGO */
-
-.footer-logo{
-display:flex;
-align-items:center;
-gap:10px;
-font-size:21px;
-font-weight:900;
-color:white;
-}
-
-.footer-logo img{
-width:170px;
-height:auto;
-max-height:60px;
-object-fit:contain;
-background:transparent;
-border-radius:0;
-display:block;
-}
-
-.footer-logo span{
-color:#f28a13;
-}
-
-.footer-right{
-text-align:right;
-font-size:12px;
-}
-
-/* ================= WHATSAPP ================= */
-
-.whatsapp{
-position:fixed;
-right:20px;
-bottom:20px;
-z-index:2000;
-width:58px;
-height:58px;
-border-radius:50%;
-background:#25D366;
-color:white;
-display:grid;
-place-items:center;
-font-size:27px;
-box-shadow:0 8px 25px rgba(0,0,0,.2);
-}
-
-/* ================= TABLET ================= */
-
-@media(max-width:850px){
-
-nav{
-display:none;
-}
-
-.hero-grid,
-.about-grid,
-.why-grid,
-.contact-grid{
-grid-template-columns:1fr;
-gap:50px;
-}
-
-.services-grid{
-grid-template-columns:1fr 1fr;
-}
-
-.people{
-grid-template-columns:1fr;
-}
-
-.heading{
-flex-direction:column;
-align-items:flex-start;
-}
-
-}
-
-/* ================= MOBILE ================= */
-
-@media(max-width:560px){
-
-section{
-padding:70px 0;
-}
-
-.hero{
-padding:70px 0;
-}
-
-.hero h1{
-font-size:47px;
-letter-spacing:-2px;
-}
-
-.services-grid{
-grid-template-columns:1fr;
-}
-
-.stats-grid{
-grid-template-columns:1fr;
-}
-
-.stat{
-border-right:0;
-border-bottom:1px solid #e1e6ed;
-}
-
-.stat:last-child{
-border-bottom:0;
-}
-
-/* MOBILE LOGO */
-
-.logo img{
-width:145px;
-height:auto;
-max-height:60px;
-}
-
-.hero-card{
-padding:25px 18px;
-}
-
-.hero-card img{
-width:100%;
-max-width:330px;
-height:auto;
-}
-
-.footer{
-flex-direction:column;
-}
-
-.footer-right{
-text-align:left;
-}
-
-.footer-logo img{
-width:150px;
-height:auto;
-max-height:55px;
-}
-
-}
-
-/* VERY SMALL PHONES */
-
-@media(max-width:380px){
-
-.logo img{
-width:125px;
-}
-
-.hero-card img{
-max-width:280px;
-}
-
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Supreme Services | Professional Cleaning & Facility Services</title>
+
+    <meta name="description"
+          content="Supreme Services provides professional cleaning, housekeeping and facility services in Kalaburagi and surrounding areas.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f9fc;
+            color: #172033;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.97);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: auto;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            height: 65px;
+            width: auto;
+            max-width: 210px;
+            object-fit: contain;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #14213d;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #f58220;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 78vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+            background:
+                linear-gradient(rgba(3, 22, 63, 0.82), rgba(3, 22, 63, 0.88)),
+                url("service1.JPG") center/cover no-repeat;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 7vw, 76px);
+            line-height: 1.05;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero h1 span {
+            color: #ff8a00;
+        }
+
+        .hero p {
+            font-size: clamp(18px, 2.5vw, 25px);
+            margin-bottom: 35px;
+            color: #f1f5ff;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 30px;
+            border-radius: 50px;
+            background: #f58220;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            margin: 6px;
+            transition: 0.3s;
+            border: 2px solid #f58220;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            background: #ff9b38;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border-color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #14213d;
+        }
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
+
+        section {
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(30px, 5vw, 45px);
+            color: #102a56;
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: #667085;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .about-text h3 {
+            font-size: 32px;
+            color: #102a56;
+            margin-bottom: 18px;
+        }
+
+        .about-text p {
+            color: #596579;
+            margin-bottom: 18px;
+        }
+
+        .features {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .features li {
+            margin: 12px 0;
+            font-weight: 600;
+        }
+
+        .features li::before {
+            content: "✓";
+            color: #f58220;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services {
+            background: #f7f9fc;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+            transition: 0.3s;
+            border-top: 4px solid #f58220;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+
+        .service-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: #102a56;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .service-card p {
+            color: #667085;
+        }
+
+        /* =========================
+           GALLERY
+        ========================= */
+
+        .gallery {
+            background: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .gallery-item {
+            position: relative;
+            height: 270px;
+            overflow: hidden;
+            border-radius: 15px;
+            cursor: pointer;
+            background: #e9edf3;
+            box-shadow: 0 8px 22px rgba(0,0,0,0.10);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            background: linear-gradient(
+                transparent,
+                rgba(0,0,0,0.75)
+            );
+            color: white;
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay h3 {
+            font-size: 18px;
+        }
+
+        /* =========================
+           LIGHTBOX
+        ========================= */
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            background: rgba(0,0,0,0.92);
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 95%;
+            max-height: 90vh;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+
+        .close-lightbox {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 45px;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        /* =========================
+           WHY US
+        ========================= */
+
+        .why-us {
+            background: #102a56;
+            color: white;
+        }
+
+        .why-us .section-title h2 {
+            color: white;
+        }
+
+        .why-us .section-title p {
+            color: #dce5f5;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .why-card {
+            text-align: center;
+            padding: 30px 15px;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 15px;
+        }
+
+        .why-card .number {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .why-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .why-card p {
+            color: #d7dfef;
+            font-size: 14px;
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            text-align: center;
+            background:
+                linear-gradient(rgba(16,42,86,0.92), rgba(16,42,86,0.92)),
+                url("service3.JPG") center/cover no-repeat;
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: clamp(30px, 5vw, 48px);
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            margin-bottom: 25px;
+            color: #e5ebf5;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #071a38;
+            color: white;
+            padding: 45px 20px 20px;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-logo {
+            width: 190px;
+            margin-bottom: 15px;
+        }
+
+        footer h3 {
+            margin-bottom: 15px;
+            color: #ff8a00;
+        }
+
+        footer p,
+        footer a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin: 8px 0;
+        }
+
+        .copyright {
+            max-width: 1200px;
+            margin: 35px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            text-align: center;
+            color: #9eabc0;
+            font-size: 14px;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            nav {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .nav {
+                padding: 10px 15px;
+            }
+
+            .logo {
+                height: 52px;
+                max-width: 160px;
+            }
+
+            nav {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .hero {
+                min-height: 70vh;
+                padding: 60px 18px;
+            }
+
+            section {
+                padding: 60px 15px;
+            }
+
+            .service-grid,
+            .gallery-grid,
+            .why-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item {
+                height: 280px;
+            }
+
+            .about-image {
+                height: 300px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-
-<!-- ================= HEADER ================= -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
+    <div class="nav">
 
-<div class="container nav">
+        <a href="#home">
+            <img
+                src="logo.jpeg.JPG"
+                alt="Supreme Services Logo"
+                class="logo"
+            >
+        </a>
 
-<a href="#" class="logo">
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-<img src="logo.jpeg.JPG" alt="Supreme Services Logo">
-
-</a>
-
-<nav>
-
-<a href="#about">About</a>
-
-<a href="#services">Services</a>
-
-<a href="#why">Why Us</a>
-
-<a href="#management">Management</a>
-
-<a href="#contact">Contact</a>
-
-<a href="tel:+919187582210" class="call">
-Call Now
-</a>
-
-</nav>
-
-</div>
-
+    </div>
 </header>
 
 
-<!-- ================= HERO ================= -->
+<!-- =========================
+     HERO
+========================= -->
 
-<section class="hero">
+<section class="hero" id="home">
 
-<div class="container hero-grid">
+    <div class="hero-content">
 
-<div>
+        <h1>
+            Supreme <span>Services</span>
+        </h1>
 
-<div class="tag">
-KALABURAGI • PROFESSIONAL MANPOWER SOLUTIONS
-</div>
+        <p>
+            Professional Cleaning & Facility Services
+        </p>
 
-<h1>
-Reliable manpower.<br>
-<span>Professional service.</span>
-</h1>
+        <p>
+            Excellence in Every Service
+        </p>
 
-<p>
-Supreme Services provides reliable and professional
-manpower solutions for hospitals, offices and other
-organizations across Kalaburagi.
-</p>
+        <a href="#services" class="btn">
+            Our Services
+        </a>
 
-<div class="buttons">
+        <a href="#gallery" class="btn btn-outline">
+            View Our Work
+        </a>
 
-<a href="#contact" class="btn primary">
-Request Manpower →
-</a>
-
-<a
-href="https://wa.me/919187582210?text=Hello%20Supreme%20Services%2C%20I%20would%20like%20to%20enquire%20about%20manpower%20services."
-target="_blank"
-class="btn secondary">
-
-WhatsApp Us
-
-</a>
-
-</div>
-
-</div>
-
-
-<div class="hero-card">
-
-<img
-src="logo.jpeg.JPG"
-alt="Supreme Services Logo">
-
-<h2>
-Excellence in<br>
-<span>Every Service</span>
-</h2>
-
-<p>
-Trusted manpower support in Kalaburagi
-</p>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- ================= STATS ================= -->
+<!-- =========================
+     ABOUT
+========================= -->
 
-<div class="stats">
+<section class="about" id="about">
 
-<div class="container stats-grid">
+    <div class="container">
 
-<div class="stat">
+        <div class="section-title">
+            <h2>About Supreme Services</h2>
+            <p>
+                Reliable professional cleaning and facility support
+                designed for healthcare and commercial environments.
+            </p>
+        </div>
 
-<strong>15+</strong>
+        <div class="about-grid">
 
-<span>
-Sites Managed Across Kalaburagi
-</span>
+            <div>
+                <img
+                    src="service2.JPG"
+                    alt="Supreme Services professional cleaning"
+                    class="about-image"
+                >
+            </div>
 
-</div>
+            <div class="about-text">
 
+                <h3>Professional. Reliable. Dedicated.</h3>
 
-<div class="stat">
+                <p>
+                    Supreme Services provides professional cleaning,
+                    housekeeping and facility support services with
+                    a focus on hygiene, cleanliness and quality.
+                </p>
 
-<strong>7</strong>
+                <p>
+                    Our team works across healthcare and commercial
+                    environments, helping maintain clean, safe and
+                    well-organized facilities.
+                </p>
 
-<span>
-Manpower Service Categories
-</span>
+                <ul class="features">
+                    <li>Professional cleaning team</li>
+                    <li>Healthcare facility cleaning</li>
+                    <li>Pharmacy & clinical area cleaning</li>
+                    <li>Housekeeping support</li>
+                    <li>High attention to hygiene</li>
+                    <li>Reliable service standards</li>
+                </ul>
 
-</div>
+            </div>
 
+        </div>
 
-<div class="stat">
-
-<strong>24/7</strong>
-
-<span>
-Professional Operational Support
-</span>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- ================= ABOUT ================= -->
-
-<section id="about">
-
-<div class="container about-grid">
-
-<div>
-
-<div class="label">
-ABOUT SUPREME SERVICES
-</div>
-
-<h2>
-Professional manpower built around
-<span>reliability.</span>
-</h2>
-
-</div>
-
-
-<div class="about-text">
-
-<p>
-Supreme Services is a professional manpower service
-provider based in Kalaburagi, Karnataka.
-</p>
-
-<p>
-We provide dependable manpower solutions for hospitals,
-offices and other organizations, helping clients manage
-their day-to-day staffing requirements.
-</p>
-
-<p>
-Our team provides housekeeping staff, experienced
-ayyammas, ward boys, office boys, supervisors,
-bouncers and security guards.
-</p>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- ================= SERVICES ================= -->
+<!-- =========================
+     SERVICES
+========================= -->
 
 <section class="services" id="services">
 
-<div class="container">
+    <div class="container">
 
-<div class="heading">
+        <div class="section-title">
 
-<div>
+            <h2>Our Services</h2>
 
-<div class="label">
-OUR SERVICES
-</div>
+            <p>
+                Professional cleaning and facility support for
+                healthcare, commercial and institutional environments.
+            </p>
 
-<h2>
-Manpower for the work<br>
-<span>that keeps things moving.</span>
-</h2>
-
-</div>
-
-<p>
-Choose the manpower category that matches
-your organization's requirements.
-</p>
-
-</div>
+        </div>
 
 
-<div class="services-grid">
+        <div class="service-grid">
+
+            <div class="service-card">
+                <div class="service-icon">🏥</div>
+                <h3>Hospital Cleaning</h3>
+                <p>
+                    Professional cleaning and housekeeping support
+                    for hospitals and healthcare facilities.
+                </p>
+            </div>
 
 
-<div class="service">
-
-<div class="service-number">
-01
-</div>
-
-<div class="service-icon">
-✦
-</div>
-
-<h3>
-Housekeeping Staff
-</h3>
-
-<p>
-Reliable housekeeping manpower for hospitals,
-offices and facilities.
-</p>
-
-</div>
+            <div class="service-card">
+                <div class="service-icon">🧹</div>
+                <h3>Housekeeping</h3>
+                <p>
+                    Daily housekeeping and cleaning services to
+                    maintain clean and organized facilities.
+                </p>
+            </div>
 
 
-<div class="service">
-
-<div class="service-number">
-02
-</div>
-
-<div class="service-icon">
-+
-</div>
-
-<h3>
-Experienced Ayyammas
-</h3>
-
-<p>
-Experienced support staff for hospitals and
-care environments.
-</p>
-
-</div>
+            <div class="service-card">
+                <div class="service-icon">🧼</div>
+                <h3>Deep Cleaning</h3>
+                <p>
+                    Detailed cleaning of floors, rooms, surfaces
+                    and high-use areas.
+                </p>
+            </div>
 
 
-<div class="service">
-
-<div class="service-number">
-03
-</div>
-
-<div class="service-icon">
-+
-</div>
-
-<h3>
-Experienced Ward Boys
-</h3>
-
-<p>
-Reliable ward support personnel for healthcare
-facilities.
-</p>
-
-</div>
+            <div class="service-card">
+                <div class="service-icon">💊</div>
+                <h3>Pharmacy Cleaning</h3>
+                <p>
+                    Professional cleaning support for pharmacy
+                    and medicine storage environments.
+                </p>
+            </div>
 
 
-<div class="service">
-
-<div class="service-number">
-04
-</div>
-
-<div class="service-icon">
-+
-</div>
-
-<h3>
-Office Boys
-</h3>
-
-<p>
-Practical office support for everyday
-workplace requirements.
-</p>
-
-</div>
+            <div class="service-card">
+                <div class="service-icon">🪟</div>
+                <h3>Glass & Window Cleaning</h3>
+                <p>
+                    Cleaning of glass doors, windows and other
+                    visible surfaces.
+                </p>
+            </div>
 
 
-<div class="service">
+            <div class="service-card">
+                <div class="service-icon">🏢</div>
+                <h3>Facility Support</h3>
+                <p>
+                    Reliable facility cleaning and support services
+                    for commercial and institutional environments.
+                </p>
+            </div>
 
-<div class="service-number">
-05
-</div>
+        </div>
 
-<div class="service-icon">
-+
-</div>
-
-<h3>
-Supervisors
-</h3>
-
-<p>
-Supervisory manpower to help coordinate
-daily operations.
-</p>
-
-</div>
-
-
-<div class="service">
-
-<div class="service-number">
-06
-</div>
-
-<div class="service-icon">
-+
-</div>
-
-<h3>
-Bouncers
-</h3>
-
-<p>
-Professional personnel for access control
-and venue support.
-</p>
-
-</div>
-
-
-<div class="service">
-
-<div class="service-number">
-07
-</div>
-
-<div class="service-icon">
-+
-</div>
-
-<h3>
-Security Guards
-</h3>
-
-<p>
-Security manpower for organizations,
-facilities and operational sites.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- ================= WHY US ================= -->
+<!-- =========================
+     GALLERY
+========================= -->
 
-<section class="why" id="why">
+<section class="gallery" id="gallery">
 
-<div class="container why-grid">
+    <div class="container">
 
-<div>
+        <div class="section-title">
 
-<div class="label" style="color:#ffad3b">
-WHY SUPREME SERVICES
-</div>
+            <h2>Our Work</h2>
 
-<h2>
-One partner for
-<span>essential manpower.</span>
-</h2>
+            <p>
+                A glimpse of our team providing professional
+                cleaning and facility services.
+            </p>
 
-</div>
-
-
-<div class="why-list">
+        </div>
 
 
-<div class="why-item">
+        <div class="gallery-grid">
 
-<span>01</span>
+            <div class="gallery-item"
+                 onclick="openLightbox('service1.JPG')">
 
-<div>
+                <img
+                    src="service1.JPG"
+                    alt="Supreme Services hospital cleaning"
+                    loading="lazy"
+                >
 
-<h3>
-Reliable Manpower
-</h3>
+                <div class="gallery-overlay">
+                    <h3>Hospital Cleaning</h3>
+                </div>
 
-<p>
-Staffing support designed around
-your operational requirements.
-</p>
-
-</div>
-
-</div>
+            </div>
 
 
-<div class="why-item">
+            <div class="gallery-item"
+                 onclick="openLightbox('service2.JPG')">
 
-<span>02</span>
+                <img
+                    src="service2.JPG"
+                    alt="Supreme Services cleaning service"
+                    loading="lazy"
+                >
 
-<div>
+                <div class="gallery-overlay">
+                    <h3>Professional Cleaning</h3>
+                </div>
 
-<h3>
-Multiple Service Categories
-</h3>
-
-<p>
-Housekeeping, healthcare support,
-office staff, supervision and security.
-</p>
-
-</div>
-
-</div>
+            </div>
 
 
-<div class="why-item">
+            <div class="gallery-item"
+                 onclick="openLightbox('service3.JPG')">
 
-<span>03</span>
+                <img
+                    src="service3.JPG"
+                    alt="Supreme Services facility cleaning"
+                    loading="lazy"
+                >
 
-<div>
+                <div class="gallery-overlay">
+                    <h3>Facility Cleaning</h3>
+                </div>
 
-<h3>
-Local Presence
-</h3>
-
-<p>
-Professional manpower services
-based in Kalaburagi.
-</p>
-
-</div>
-
-</div>
+            </div>
 
 
-<div class="why-item">
+            <div class="gallery-item"
+                 onclick="openLightbox('service4.JPG')">
 
-<span>04</span>
+                <img
+                    src="service4.JPG"
+                    alt="Supreme Services room cleaning"
+                    loading="lazy"
+                >
 
-<div>
+                <div class="gallery-overlay">
+                    <h3>Room Cleaning</h3>
+                </div>
 
-<h3>
-Site Management
-</h3>
-
-<p>
-Managing manpower requirements across
-multiple client locations.
-</p>
-
-</div>
-
-</div>
+            </div>
 
 
-</div>
+            <div class="gallery-item"
+                 onclick="openLightbox('service5.JPG')">
 
-</div>
+                <img
+                    src="service5.JPG"
+                    alt="Supreme Services pharmacy support"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <h3>Pharmacy Support</h3>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item"
+                 onclick="openLightbox('service6.JPG')">
+
+                <img
+                    src="service6.JPG"
+                    alt="Supreme Services glass cleaning"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <h3>Glass Cleaning</h3>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item"
+                 onclick="openLightbox('service7.JPG')">
+
+                <img
+                    src="service7.JPG"
+                    alt="Supreme Services professional cleaning team"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <h3>Professional Team</h3>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item"
+                 onclick="openLightbox('service8.JPG')">
+
+                <img
+                    src="service8.JPG"
+                    alt="Supreme Services cleaning work"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <h3>Our Work</h3>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- ================= MANAGEMENT ================= -->
+<!-- =========================
+     WHY CHOOSE US
+========================= -->
 
-<section id="management">
+<section class="why-us">
 
-<div class="container">
+    <div class="container">
 
-<div class="label">
-MANAGEMENT
-</div>
+        <div class="section-title">
 
-<h2>
-Speak directly with
-<span>our management.</span>
-</h2>
+            <h2>Why Choose Supreme Services?</h2>
 
+            <p>
+                Our focus is simple: dependable service,
+                professional standards and customer satisfaction.
+            </p>
 
-<div class="people">
-
-
-<div class="person">
-
-<div class="role">
-MANAGING DIRECTOR
-</div>
-
-<h3>
-Syed Shafeeq Ahmed
-</h3>
-
-<a href="tel:+919187582210">
-+91 91875 82210
-</a>
-
-</div>
+        </div>
 
 
-<div class="person">
+        <div class="why-grid">
 
-<div class="role">
-MANAGING DIRECTOR
-</div>
-
-<h3>
-Md Shahdil Khan
-</h3>
-
-<a href="tel:+919148653964">
-+91 91486 53964
-</a>
-
-</div>
+            <div class="why-card">
+                <div class="number">✓</div>
+                <h3>Professional</h3>
+                <p>
+                    Trained team focused on professional
+                    cleaning standards.
+                </p>
+            </div>
 
 
-</div>
+            <div class="why-card">
+                <div class="number">★</div>
+                <h3>Quality</h3>
+                <p>
+                    Attention to detail in every cleaning task.
+                </p>
+            </div>
 
-</div>
+
+            <div class="why-card">
+                <div class="number">⏱</div>
+                <h3>Reliable</h3>
+                <p>
+                    Consistent service and dependable support.
+                </p>
+            </div>
+
+
+            <div class="why-card">
+                <div class="number">♥</div>
+                <h3>Dedicated</h3>
+                <p>
+                    We take pride in maintaining clean facilities.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- ================= CONTACT ================= -->
+<!-- =========================
+     CALL TO ACTION
+========================= -->
 
-<section class="contact" id="contact">
+<section class="cta" id="contact">
 
-<div class="container contact-grid">
+    <div class="container">
 
-<div>
+        <h2>Need Professional Cleaning Services?</h2>
 
-<div class="label">
-CONTACT SUPREME SERVICES
-</div>
+        <p>
+            Get in touch with Supreme Services for professional
+            cleaning and facility support.
+        </p>
 
-<h2>
-Need manpower?
-<span>Let's talk.</span>
-</h2>
+        <a href="mailto:info@supremeserviceskalaburagi.com"
+           class="btn">
+            Contact Supreme Services
+        </a>
 
-<p class="contact-text">
-
-Tell us what type of staff you need and our
-management team can discuss your requirements.
-
-</p>
-
-
-<div class="contact-row">
-
-<div class="contact-icon">
-☎
-</div>
-
-<div>
-
-<small>
-PHONE
-</small>
-
-<strong>
-+91 91875 82210
-</strong>
-
-</div>
-
-</div>
-
-
-<div class="contact-row">
-
-<div class="contact-icon">
-☎
-</div>
-
-<div>
-
-<small>
-PHONE
-</small>
-
-<strong>
-+91 91486 53964
-</strong>
-
-</div>
-
-</div>
-
-
-<div class="contact-row">
-
-<div class="contact-icon">
-✉
-</div>
-
-<div>
-
-<small>
-EMAIL
-</small>
-
-<strong>
-infosupremeservicesorg@gmail.com
-</strong>
-
-</div>
-
-</div>
-
-
-<div class="contact-row">
-
-<div class="contact-icon">
-⌖
-</div>
-
-<div>
-
-<small>
-OFFICE
-</small>
-
-<strong>
-Sri Tirumala Complex, Near Mudda Hospital,
-MG Road, Kalaburagi – 585105
-</strong>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- ENQUIRY FORM -->
-
-<form id="enquiry">
-
-<label>
-
-Your Name
-
-<input
-id="name"
-type="text"
-placeholder="Enter your name"
-required>
-
-</label>
-
-
-<label>
-
-Phone Number
-
-<input
-id="phone"
-type="tel"
-placeholder="Enter your phone number"
-required>
-
-</label>
-
-
-<label>
-
-Service Required
-
-<select id="service" required>
-
-<option value="">
-Select a service
-</option>
-
-<option>
-Housekeeping Staff
-</option>
-
-<option>
-Experienced Ayyammas
-</option>
-
-<option>
-Experienced Ward Boys
-</option>
-
-<option>
-Office Boys
-</option>
-
-<option>
-Supervisors
-</option>
-
-<option>
-Bouncers
-</option>
-
-<option>
-Security Guards
-</option>
-
-<option>
-Multiple Services
-</option>
-
-</select>
-
-</label>
-
-
-<label>
-
-Your Requirement
-
-<textarea
-id="message"
-rows="5"
-placeholder="Tell us how many staff you require and any other details">
-</textarea>
-
-</label>
-
-
-<button type="submit">
-Send Enquiry on WhatsApp →
-</button>
-
-</form>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-<div class="container footer">
+    <div class="footer-grid">
 
-<div>
+        <div>
 
-<div class="footer-logo">
+            <img
+                src="logo.jpeg.JPG"
+                alt="Supreme Services"
+                class="footer-logo"
+            >
 
-<img
-src="logo.jpeg.JPG"
-alt="Supreme Services Logo">
+            <p>
+                Professional Cleaning & Facility Services.
+            </p>
 
-</div>
+            <p>
+                Excellence in Every Service.
+            </p>
 
-<p>
-Excellence in Every Service.
-</p>
-
-</div>
+        </div>
 
 
-<div class="footer-right">
+        <div>
 
-© <span id="year"></span>
-Supreme Services
+            <h3>Quick Links</h3>
 
-<br>
+            <ul class="footer-links">
 
-Kalaburagi, Karnataka
+                <li>
+                    <a href="#home">Home</a>
+                </li>
 
-</div>
+                <li>
+                    <a href="#about">About</a>
+                </li>
 
-</div>
+                <li>
+                    <a href="#services">Services</a>
+                </li>
+
+                <li>
+                    <a href="#gallery">Gallery</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>Location</h3>
+
+            <p>
+                Kalaburagi, Karnataka
+            </p>
+
+            <p>
+                India
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 Supreme Services. All Rights Reserved.
+
+    </div>
 
 </footer>
 
 
-<!-- ================= WHATSAPP ================= -->
+<!-- =========================
+     LIGHTBOX
+========================= -->
 
-<a
-class="whatsapp"
-href="https://wa.me/919187582210"
-target="_blank"
-aria-label="WhatsApp">
+<div class="lightbox" id="lightbox">
 
-☎
+    <span
+        class="close-lightbox"
+        onclick="closeLightbox()">
+        &times;
+    </span>
 
-</a>
+    <img
+        id="lightboxImage"
+        src=""
+        alt="Supreme Services"
+    >
+
+</div>
 
 
-<!-- ================= JAVASCRIPT ================= -->
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
 <script>
 
-document.getElementById("year").textContent =
-new Date().getFullYear();
+    function openLightbox(image) {
+
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImage = document.getElementById("lightboxImage");
+
+        lightboxImage.src = image;
+
+        lightbox.classList.add("active");
+    }
 
 
-document.getElementById("enquiry")
-.addEventListener("submit", function(e){
+    function closeLightbox() {
 
-e.preventDefault();
+        const lightbox = document.getElementById("lightbox");
 
-const name =
-document.getElementById("name").value;
-
-const phone =
-document.getElementById("phone").value;
-
-const service =
-document.getElementById("service").value;
-
-const message =
-document.getElementById("message").value;
+        lightbox.classList.remove("active");
+    }
 
 
-const text =
-"Hello Supreme Services,%0A%0A" +
+    document.getElementById("lightbox").addEventListener("click", function(event) {
 
-"Name: " +
-encodeURIComponent(name) +
-"%0A" +
+        if (event.target === this) {
+            closeLightbox();
+        }
 
-"Phone: " +
-encodeURIComponent(phone) +
-"%0A" +
-
-"Service: " +
-encodeURIComponent(service) +
-"%0A" +
-
-"Requirement: " +
-encodeURIComponent(message);
+    });
 
 
-window.open(
-"https://wa.me/919187582210?text=" + text,
-"_blank"
-);
+    document.addEventListener("keydown", function(event) {
 
-});
+        if (event.key === "Escape") {
+            closeLightbox();
+        }
+
+    });
 
 </script>
 
